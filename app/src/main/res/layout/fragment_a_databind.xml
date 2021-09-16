@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <!--
+        todo import 从声明的对象中引入该对象
+        <import type="com.meiling.framework.app.viewmodel.data.Data"/>
+        todo variable 相当于创建一个可在布局中使用的对象，该对象可根据需要在布局中使用
+        <variable
+            name="nameEntity"
+            type="Data" />-->
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

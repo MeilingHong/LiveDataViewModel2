@@ -1,0 +1,156 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--Appbar背景色-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--状态栏颜色-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--控制各个控件被选中时的颜色-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--页面背景色-->
+<!--        <item name="android:windowBackground">@color/windowBackground</item>-->
+        <!--底部导航栏颜色-->
+        <item name="android:navigationBarColor">@color/navigationBarColor</item>
+        <!--ToolBar上的Title颜色-->
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <!--各个控制控件的默认颜色-->
+        <item name="android:colorControlNormal">@color/colorControlNormal</item>
+        <!--    直接使用图片，则图片将会铺满全屏    -->
+        <!--        <item name="android:windowBackground">@drawable/ic_launcher</item>-->
+
+        <!-- todo 这个背景将针对全部页面生效，如果布局本身没有设置背景色时【默认透明】，将会显示出这个指定的背景图 -->
+
+<!--   todo 测试发现部分手机系统存在兼容问题(VIVO V1930A Android 9 )，导致APP无法启动【drawable 目录中使用xml形式作为背景(bitmap使用mipmap,drawable)】     -->
+
+<!--   todo 但直接使用drawable/mipmap中的图片就可以，不会引起启动问题，启动动画的图还是直接这样使用比较好些
+           【图片将会以被拉伸的方式全屏显示(保险的方式是UI切个大图当做背景)】     -->
+<!--        <item name="android:windowBackground">@drawable/ic_launcher</item>-->
+        <item name="android:windowBackground">@color/color_white</item>
+<!--        <item name="android:windowBackground">@drawable/launcher_bg</item>-->
+    </style>
+
+
+    <!--
+    ********************************************************************************************************************************************************
+    -->
+    <style name="myProgressBarStyleLarge">
+        <item name="android:indeterminateDrawable">@drawable/rotate_loading_icon</item>
+        <item name="android:indeterminateDuration">1500</item>
+        <item name="android:minWidth">40dip</item>
+        <item name="android:maxWidth">40dip</item>
+        <item name="android:minHeight">40dip</item>
+        <item name="android:maxHeight">40dip</item>
+    </style>
+
+    <style name="myProgressBarStyleLarge2">
+        <item name="android:indeterminateDrawable">@drawable/rotate_loading_icon</item>
+        <item name="android:progressDrawable">@drawable/rotate_loading_icon</item>
+        <item name="android:indeterminateDuration">1500</item>
+        <item name="android:minWidth">40dip</item>
+        <item name="android:maxWidth">40dip</item>
+        <item name="android:minHeight">40dip</item>
+        <item name="android:maxHeight">40dip</item>
+    </style>
+
+    <!-- 方形CheckBox;使用时，不能够设置button属性，background属性 -->
+    <style name="CheckBoxStyleRectangle1" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:background">@drawable/checkbox_rectangle</item>
+        <item name="android:padding">1dp</item>
+    </style>
+
+    <style name="CheckBoxStyleCycle1" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:background">@drawable/checkbox_cycle</item>
+        <item name="android:padding">1dp</item>
+    </style>
+
+    <!--
+    ********************************************************************************************************************************************************
+    -->
+
+    <style name="Dialog.NoTitle.BottomIn" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationBottomInOut</item>
+    </style>
+
+    <style name="Dialog.NoTitle.TopIn" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationTopInOut</item>
+    </style>
+
+    <style name="Dialog.NoTitle.AlphaIn2" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationAlphaInOut</item>
+    </style>
+
+    <!-- 动画相关配置*************************************************************************************** -->
+
+    <style name="AnimationBottomInOut" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/bottom_out</item>
+    </style>
+
+    <style name="AnimationTopInOut" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/top_in</item>
+        <item name="android:windowExitAnimation">@anim/top_out</item>
+    </style>
+
+    <style name="popupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/in_fade</item>
+        <item name="android:windowExitAnimation">@anim/out_fade</item>
+    </style>
+
+    <!-- 让Dialog从中间显示、消失，不适合PopupWindow的显示(跟位置相关联)-->
+    <style name="AnimationCenterInOut" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/alpha_in2</item>
+        <item name="android:windowExitAnimation">@anim/alpha_out2</item>
+    </style>
+    <!-- 仿Toast的形式的Dialog*************************************************************************************** -->
+    <style name="Dialog.NoTitle.AlphaIn" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowAnimationStyle">@style/AnimationAlphaInOut</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="AnimationAlphaInOut" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/alpha_in</item>
+        <item name="android:windowExitAnimation">@anim/alpha_out</item>
+    </style>
+
+    <!-- 密码输入框*************************************************************************************** -->
+    <declare-styleable name="PasswordEditText">
+        <!-- 密码的个数 -->
+        <attr name="passwordNumber" format="integer"/>
+        <!-- 密码圆点的半径 -->
+        <attr name="passwordRadius" format="dimension" />
+        <!-- 密码圆点的颜色 -->
+        <attr name="passwordColor" format="color" />
+        <!-- 分割线的颜色 -->
+        <attr name="divisionLineColor" format="color" />
+        <!-- 分割线的大小 -->
+        <attr name="divisionLineSize" format="dimension" />
+        <!-- 背景边框的颜色 -->
+        <attr name="bgColor" format="color" />
+        <!-- 背景边框的大小 -->
+        <attr name="bgSize" format="dimension" />
+        <!-- 背景边框的圆角大小 -->
+        <attr name="bgCorner" format="dimension"/>
+    </declare-styleable>
+
+</resources>

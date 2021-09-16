@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--
+    todo 2、
+     选中根布局
+     Alt+Enter
+     选中[Convert to data binding layout]
+     会生成<layout>/<data>标签
+     将View组件和Object对象进行绑定需要使用到
+
+    todo 3、
+     <data>标签内使用<import>标签引入需要绑定的实体类
+     【避免在使用每一个<variable>标签时，需要每次在type内声明完整的实体类的完整路径】
+      java.lang.*  ;  下的类会被自动引入，所以不需要使用<import>标签显示声明
+
+    todo 4、
+     当需要绑定的实体类存在完全同名的情况时，可以使用 alias 别名来进行区别,<variable>中type值为声明的alias值
+
+    todo 5、
+     View组件中使用时，使用：@{[variable中name对应的值].需要使用到的实体类的属性}*** 例如下面的 nameEntity.name
+    -->
+    <data>
+        <!--todo import 从声明的对象中引入该对象-->
+        <import type="com.meiling.livedata.app.entity.NameEntity"/>
+        <!--todo variable 相当于创建一个可在布局中使用的对象，该对象可根据需要在布局中使用-->
+        <variable
+            name="nameEntity"
+            type="NameEntity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        >
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@color/navigationBarColor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            />
+        <TextView
+            android:id="@+id/click"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{nameEntity.name}"
+            android:textStyle="bold"
+            android:textColor="@color/color_white"
+            android:padding="20dp"
+            android:background="@color/alpha_percent_25"
+            android:singleLine="true"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

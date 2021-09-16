@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Appbar背景色-->
+    <color name="colorPrimary">#6200EE</color>
+    <!--状态栏颜色-->
+    <color name="colorPrimaryDark">#ff7935</color>
+    <!--控制各个控件被选中时的颜色-->
+    <color name="colorAccent">#03DAC5</color>
+    <!--页面背景色-->
+    <color name="windowBackground">#3296fa</color>
+    <!--底部导航栏颜色-->
+    <color name="navigationBarColor">#3296fa</color>
+    <!--ToolBar上的Title颜色-->
+    <color name="textColorPrimary">#3296fa</color>
+    <!--各个控制控件的默认颜色-->
+    <color name="colorControlNormal">#3296fa</color>
+
+    <!--  透明度颜色 *******************************************************************  -->
+    <color name="alpha_percent_00">#00000000</color>
+    <color name="alpha_percent_01">#03000000</color>
+    <color name="alpha_percent_02">#05000000</color>
+    <color name="alpha_percent_03">#08000000</color>
+    <color name="alpha_percent_04">#0a000000</color>
+    <color name="alpha_percent_05">#0d000000</color>
+    <color name="alpha_percent_06">#0f000000</color>
+    <color name="alpha_percent_07">#12000000</color>
+    <color name="alpha_percent_08">#14000000</color>
+    <color name="alpha_percent_09">#17000000</color>
+    <color name="alpha_percent_10">#1a000000</color>
+    <color name="alpha_percent_11">#1c000000</color>
+    <color name="alpha_percent_12">#1f000000</color>
+    <color name="alpha_percent_13">#21000000</color>
+    <color name="alpha_percent_14">#24000000</color>
+    <color name="alpha_percent_15">#26000000</color>
+    <color name="alpha_percent_16">#29000000</color>
+    <color name="alpha_percent_17">#2b000000</color>
+    <color name="alpha_percent_18">#2e000000</color>
+    <color name="alpha_percent_19">#30000000</color>
+    <color name="alpha_percent_20">#33000000</color>
+    <color name="alpha_percent_21">#36000000</color>
+    <color name="alpha_percent_22">#38000000</color>
+    <color name="alpha_percent_23">#3b000000</color>
+    <color name="alpha_percent_24">#3d000000</color>
+    <color name="alpha_percent_25">#40000000</color>
+    <color name="alpha_percent_26">#42000000</color>
+    <color name="alpha_percent_27">#45000000</color>
+    <color name="alpha_percent_28">#47000000</color>
+    <color name="alpha_percent_29">#4a000000</color>
+    <color name="alpha_percent_30">#4d000000</color>
+    <color name="alpha_percent_31">#4f000000</color>
+    <color name="alpha_percent_32">#52000000</color>
+    <color name="alpha_percent_33">#54000000</color>
+    <color name="alpha_percent_34">#57000000</color>
+    <color name="alpha_percent_35">#59000000</color>
+    <color name="alpha_percent_36">#5c000000</color>
+    <color name="alpha_percent_37">#5e000000</color>
+    <color name="alpha_percent_38">#61000000</color>
+    <color name="alpha_percent_39">#63000000</color>
+    <color name="alpha_percent_40">#66000000</color>
+    <color name="alpha_percent_41">#69000000</color>
+    <color name="alpha_percent_42">#6b000000</color>
+    <color name="alpha_percent_43">#6f000000</color>
+    <color name="alpha_percent_44">#70000000</color>
+    <color name="alpha_percent_45">#73000000</color>
+    <color name="alpha_percent_46">#75000000</color>
+    <color name="alpha_percent_47">#78000000</color>
+    <color name="alpha_percent_48">#7a000000</color>
+    <color name="alpha_percent_49">#7d000000</color>
+    <color name="alpha_percent_50">#80000000</color>
+    <color name="alpha_percent_51">#83000000</color>
+    <color name="alpha_percent_52">#85000000</color>
+    <color name="alpha_percent_53">#87000000</color>
+    <color name="alpha_percent_54">#8a000000</color>
+    <color name="alpha_percent_55">#8c000000</color>
+    <color name="alpha_percent_56">#8f000000</color>
+    <color name="alpha_percent_57">#91000000</color>
+    <color name="alpha_percent_58">#94000000</color>
+    <color name="alpha_percent_59">#96000000</color>
+    <color name="alpha_percent_60">#99000000</color>
+    <color name="alpha_percent_61">#9c000000</color>
+    <color name="alpha_percent_62">#9e000000</color>
+    <color name="alpha_percent_63">#a1000000</color>
+    <color name="alpha_percent_64">#a3000000</color>
+    <color name="alpha_percent_65">#a6000000</color>
+    <color name="alpha_percent_66">#a8000000</color>
+    <color name="alpha_percent_67">#ab000000</color>
+    <color name="alpha_percent_68">#ad000000</color>
+    <color name="alpha_percent_69">#b0000000</color>
+    <color name="alpha_percent_70">#b3000000</color>
+    <color name="alpha_percent_71">#b5000000</color>
+    <color name="alpha_percent_72">#b8000000</color>
+    <color name="alpha_percent_73">#ba000000</color>
+    <color name="alpha_percent_74">#bd000000</color>
+    <color name="alpha_percent_75">#bf000000</color>
+    <color name="alpha_percent_76">#c2000000</color>
+    <color name="alpha_percent_77">#c4000000</color>
+    <color name="alpha_percent_78">#c7000000</color>
+    <color name="alpha_percent_79">#c9000000</color>
+    <color name="alpha_percent_80">#cc000000</color>
+    <color name="alpha_percent_81">#cf000000</color>
+    <color name="alpha_percent_82">#d1000000</color>
+    <color name="alpha_percent_83">#d4000000</color>
+    <color name="alpha_percent_84">#d6000000</color>
+    <color name="alpha_percent_85">#d9000000</color>
+    <color name="alpha_percent_86">#db000000</color>
+    <color name="alpha_percent_87">#de000000</color>
+    <color name="alpha_percent_88">#e0000000</color>
+    <color name="alpha_percent_89">#e3000000</color>
+    <color name="alpha_percent_90">#e6000000</color>
+    <color name="alpha_percent_91">#e8000000</color>
+    <color name="alpha_percent_92">#eb000000</color>
+    <color name="alpha_percent_93">#ed000000</color>
+    <color name="alpha_percent_94">#f0000000</color>
+    <color name="alpha_percent_95">#f2000000</color>
+    <color name="alpha_percent_96">#f5000000</color>
+    <color name="alpha_percent_97">#f7000000</color>
+    <color name="alpha_percent_98">#fa000000</color>
+    <color name="alpha_percent_99">#fc000000</color>
+    <color name="alpha_percent_100">#ff000000</color>
+
+    <!--  常用的几个颜色 *******************************************************************  -->
+
+    <color name="color_transparent">#00ffffff</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_black">#000000</color>
+    
+    <color name="color_black_11">#111111</color>
+    <color name="color_black_22">#222222</color>
+    <color name="color_black_33">#333333</color>
+    <color name="color_black_44">#222222</color>
+    <color name="color_black_55">#555555</color>
+    <color name="color_black_66">#666666</color>
+    <color name="color_black_77">#777777</color>
+    <color name="color_black_88">#888888</color>
+    <color name="color_black_99">#999999</color>
+    <color name="color_black_aa">#aaaaaa</color>
+    <color name="color_black_bb">#bbbbbb</color>
+    <color name="color_black_cc">#cccccc</color>
+    <color name="color_black_dd">#dddddd</color>
+    <color name="color_black_ee">#eeeeee</color>
+
+
+</resources>

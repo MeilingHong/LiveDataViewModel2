@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.meiling.livedata">
+
+    <queries>
+        <!--    确保Android11能够检测到对应的APP【微信，支付宝】，否则检测是否安装微信的机制会失效
+         todo 当需要检测对应的应用是否安装时，需要将对应应用的包名添加到这里
+         -->
+        <!-- com.blankj.utilcode SDK检测虚拟机-->
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+        </intent>
+
+        <!-- 微信支付SDK-->
+        <package android:name="com.tencent.mm" />
+        <!-- 支付宝支付SDK-->
+        <package android:name="com.eg.android.AlipayGphone" />
+        <package android:name="hk.alipay.wallet" />
+    </queries>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".base.application.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".app.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".app.activity.Main1Activity" />
+        <activity android:name=".app.activity.Main2Activity" />
+        <activity android:name=".app.activity.share.IntentShareActivity" />
+        <activity android:name=".app.activity.LiveDataActivity" />
+        <activity android:name=".app.activity.SpannableStringShowMultiSizeTextActivity" />
+        <activity android:name=".app.activity.DataBindingActivity" />
+        <activity android:name=".app.activity.LiveData2Activity" />
+        <activity android:name=".app.activity.RecyclerViewActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.meiling.livedata.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+
+        </provider>
+    </application>
+
+</manifest>

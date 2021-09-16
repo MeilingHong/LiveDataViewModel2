@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+    </data>
+    <!--  外层的布局【高度】似乎并不能按照自身的设置来显示  -->
+    <RelativeLayout
+        android:id="@+id/loadingRoot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/navigationBarColor"
+        >
+        <LinearLayout
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@color/colorPrimaryDark"
+            >
+
+            <ProgressBar
+                android:id="@+id/pbLoading"
+                style="@style/myProgressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvLoadingHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
+

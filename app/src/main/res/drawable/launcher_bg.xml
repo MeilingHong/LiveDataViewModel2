@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 设置整个屏幕背景为白色 -->
+    <item >
+        <color android:color="#ffffff"/>
+    </item>
+
+    <!-- 中间logo
+    gravity 将控制图片显示的位置，但这么设置，图片将不会显示出铺满全部背景的效果
+    -->
+    <item >
+        <bitmap
+            android:layout_width="wrap_content"
+            android:antialias="true"
+            android:gravity="center"
+            android:src="@drawable/ic_launcher" />
+    </item>
+</layer-list>

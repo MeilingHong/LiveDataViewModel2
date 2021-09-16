@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.meiling.livedata"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // todo 1、开启DataBinding的支持【Google的绑定框架】
+    dataBinding {
+        enabled = true
+    }
+
+    /*
+todo
+    与数据绑定的对比
+    视图绑定和数据绑定均会生成可用于直接引用视图的绑定类。但是，视图绑定旨在处理更简单的用例，与数据绑定相比，具有以下优势：
+        更快的编译速度：视图绑定不需要处理注释，因此编译时间更短。
+        易于使用：视图绑定不需要特别标记的 XML 布局文件，因此在应用中采用速度更快。在模块中启用视图绑定后，它会自动应用于该模块的所有布局。
+        ------
+    反过来，与数据绑定相比，视图绑定也具有以下限制：
+        视图绑定不支持布局变量或布局表达式，因此不能用于直接在 XML 布局文件中声明动态界面内容。
+        视图绑定不支持双向数据绑定。
+    考虑到这些因素，在某些情况下，最好在项目中同时使用视图绑定和数据绑定。您可以在需要高级功能的布局中使用数据绑定，而在不需要高级功能的布局中使用视图绑定。
+     */
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    // 工具module引用请跟进自身业务需要进行合理增减，用不到的工具类，不建议放入，虽然AS的release打包能够删减没用到的资源，方法等
+    implementation project(path: ':component_utils')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    // 分包
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+
+    implementation 'com.umeng.umsdk:common:9.3.8'// 必选
+    implementation 'com.umeng.umsdk:asms:1.2.2'// 必选
+    implementation 'com.umeng.umsdk:apm:1.2.0' // 错误分析升级为独立产品U-APM可按需集成，
+}

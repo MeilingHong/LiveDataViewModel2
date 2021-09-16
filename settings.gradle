@@ -1,0 +1,3 @@
+include ':component_utils'
+include ':app'
+rootProject.name = "LiveDataViewModel"
